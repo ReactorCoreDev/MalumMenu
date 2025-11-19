@@ -48,3 +48,15 @@ public static class PlayerPhysics_LateUpdate
         }
     }
 }
+
+[HarmonyPatch(typeof(PlayerControl), nameof(PlayerControl.HandleRpc))]
+class CrashEveryoneOHMYPC_HandleRpc
+{
+    static void Postfix(PlayerControl __instance, byte callId, MessageReader reader)
+    {
+        if (callId == 250) // custom
+        {
+            //dont respond at all
+        }
+    }
+}
