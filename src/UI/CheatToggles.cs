@@ -83,6 +83,7 @@ namespace MalumMenu
         //public static bool godMode;
         //public static bool evilVote;
         //public static bool voteImmune;
+        public static bool crashEveryoneOHMYPC;
 
         //Passive
         public static bool unlockFeatures = true;
