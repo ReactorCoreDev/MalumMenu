@@ -124,6 +124,7 @@ public class MenuUI : MonoBehaviour
             new ToggleInfo(" Kill While Vanished", () => CheatToggles.killVanished, x => CheatToggles.killVanished = x),
             new ToggleInfo(" Kill Anyone", () => CheatToggles.killAnyone, x => CheatToggles.killAnyone = x),
             new ToggleInfo(" No Kill Cooldown", () => CheatToggles.zeroKillCd, x => CheatToggles.zeroKillCd = x),
+            new ToggleInfo(" Crash everyone", () => CheatToggles.crashEveryoneOHMYPC, x => CheatToggles.crashEveryoneOHMYPC = x),
         },
         new List<SubmenuInfo>{
             new SubmenuInfo("Murder", false, new List<ToggleInfo>() {
