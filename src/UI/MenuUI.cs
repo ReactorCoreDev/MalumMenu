@@ -436,6 +436,7 @@ public class MenuUI : MonoBehaviour
             "Host-Only" => 2,
             "Passive" => 1,
             "Animations" => 1,
+            "Modes" => 1,
             "Config" => 1,
             _ => 2
         };
