@@ -56,7 +56,7 @@ public class ConsoleUI : MonoBehaviour
 
         GUILayout.BeginHorizontal();
 
-        if (GUILayout.Button("Clear Log", GUILayout.Width(235)))
+        if (GUILayout.Button("Clear Log", GUILayout.Width(260)))
         {
             _logEntries.Clear();
         }
