@@ -608,7 +608,7 @@ public static class Utils
         {
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
             {
-                FileName = "notepad.exe",
+                FileName = MalumMenu.configEditor.Value,
                 Arguments = configFilePath,
                 UseShellExecute = true
                 //Verb = "edit"

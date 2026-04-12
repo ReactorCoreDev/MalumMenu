@@ -42,6 +42,7 @@ public partial class MalumMenu : BasePlugin
     public static ConfigEntry<string> guestFriendCode;
     public static ConfigEntry<bool> guestMode;
     public static ConfigEntry<bool> autoLoadProfile;
+    public static ConfigEntry<string> configEditor;
 
     public override void Load()
     {
@@ -68,6 +69,11 @@ public partial class MalumMenu : BasePlugin
                                 "AutoLoadProfile",
                                 false,
                                 "When enabled, your saved keybind and toggle profile will be automatically loaded at game startup");
+
+        configEditor = Config.Bind("MalumMenu.Config",
+                                "ConfigEditor",
+                                "notepad.exe",
+                                "The program used to open the config file when using the Open Config toggle. Can be any executable, but using a text editor is recommended");
 
         // GuestMode config settings are commented out as the cheats are broken in latest updates
 
