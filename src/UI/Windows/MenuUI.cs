@@ -83,6 +83,12 @@ public class MenuUI : MonoBehaviour
         var stamp = ModManager.Instance.ModStamp;
         if (stamp) stamp.enabled = !(MalumMenu.inStealthMode || MalumMenu.isPanicked);
 
+        if (CheatToggles.openConfig)
+        {
+            Utils.OpenConfigFile();
+            CheatToggles.openConfig = false;
+        }
+
         if (CheatToggles.reloadConfig)
         {
             MalumMenu.Plugin.Config.Reload();
