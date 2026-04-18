@@ -270,4 +270,38 @@ public struct CheatToggles
             Keybinds[name] = key;
         }
     }
+
+    private static readonly Dictionary<string, bool> Values = new();
+
+    private static readonly HashSet<string> Excluded = new()
+    {
+        nameof(reloadConfig),
+        nameof(openConfig),
+        nameof(loadProfile),
+        nameof(saveProfile)
+    };
+
+    public static void ClickUpdate()
+    {
+        foreach (var pair in ToggleFields)
+        {
+            string name = pair.Key;
+            if (Excluded.Contains(name)) continue;
+
+            bool current = (bool)pair.Value.GetValue(null);
+
+            if (Values.TryGetValue(name, out bool old))
+            {
+                if (old != current)
+                {
+                    SoundManager.PlaySound("Click", 1f);
+                    Values[name] = current;
+                }
+            }
+            else
+            {
+                Values[name] = current;
+            }
+        }
+    }
 }
