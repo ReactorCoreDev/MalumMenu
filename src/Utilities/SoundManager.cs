@@ -12,10 +12,9 @@ public static class SoundManager
     public static readonly Dictionary<string, AudioClip> LoadedSounds = [];
     private static CoroutineRunner Runner;
     
-    // Example base url: https://github.com/ReactorCoreDev/ZenithX/raw/refs/heads/main/ZenithXFolder/Sounds/
-    private static readonly string BaseUrl = "Placeholder";
+    private static readonly string BaseUrl = "https://github.com/ReactorCoreDev/MalumMenu/tree/main/src/Sounds";
     private static readonly string[] SoundFiles = [
-        "Click.wav", // You can also add more WAV files.
+        "Click.wav", // You can also add more sound files.
     ];
 
     public static void Initialize()
