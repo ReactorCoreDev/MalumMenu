@@ -46,7 +46,8 @@ public class MenuUI : MonoBehaviour
 
     private void Update()
     {
-
+        CheatToggles.ClickUpdate()
+        
         if (Input.GetKeyDown(Utils.StringToKeycode(MalumMenu.menuKeybind.Value)))
         {
             // Enable or disable GUI with DELETE key
