@@ -25,6 +25,7 @@ public partial class MalumMenu : BasePlugin
     public static DoorsUI doorsUI;
     public static TasksUI tasksUI;
     public static ProtectUI protectUI;
+    public static CoroutineRunner coroutineRunner;
     public static KeybindListener keybindListener;
 
     public static string malumVersion = "3.0.2";
@@ -125,9 +126,13 @@ public partial class MalumMenu : BasePlugin
         doorsUI = AddComponent<DoorsUI>();
         tasksUI = AddComponent<TasksUI>();
         protectUI = AddComponent<ProtectUI>();
-
+        
         // Components
         keybindListener = AddComponent<KeybindListener>();
+        coroutineRunner = AddComponent<CoroutineRunner>();
+        
+        // Sound manager initialization
+        SoundManager.Initialize();
 
         // Disables Telemetry (haven't fully tested if it works, but according to Unity docs it should)
         if (noTelemetry.Value)
