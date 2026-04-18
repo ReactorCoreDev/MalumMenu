@@ -6,15 +6,6 @@ using UnityEngine.Networking;
 
 namespace MalumMenu;
 
-// Delete all these comments after reading.
-
-// This is ZenithX's sound manager, and is also why I didn't change it to MalumMenuSoundManager
-// These comments can be removed after being read. Here is how you use this sound manager!
-// SoundManager.PlaySound("Click", 1f)
-// (No extra DLLs required)
-
-// Delete this comment, but keep this one:
-
 // ZenithX's Sound Manager
 public static class SoundManager
 {
