@@ -46,7 +46,7 @@ public class MenuUI : MonoBehaviour
 
     private void Update()
     {
-        CheatToggles.ClickUpdate()
+        CheatToggles.ClickUpdate();
         
         if (Input.GetKeyDown(Utils.StringToKeycode(MalumMenu.menuKeybind.Value)))
         {
