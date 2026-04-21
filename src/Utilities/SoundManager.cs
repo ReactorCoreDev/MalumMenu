@@ -11,8 +11,8 @@ public static class SoundManager
 {
     public static readonly Dictionary<string, AudioClip> LoadedSounds = [];
     private static CoroutineRunner Runner;
-    
-    private static readonly string BaseUrl = "https://github.com/scp222thj/MalumMenu/tree/main/src/Sounds";
+    // Will be kept as ReactorCoreDev until the actual url is provided (Change it)
+    private static readonly string BaseUrl = "https://github.com/ReactorCOreDev/MalumMenu/tree/main/src/Sounds";
     private static readonly string[] SoundFiles = [
         "Click.wav", // You can also add more sound files.
     ];
